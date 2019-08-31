@@ -65,6 +65,7 @@ It *ought to* work just fine on other combinations of browsers.
 
 3. It's not clear it will work if you want to undeploy a revision of a proxy that is not the latest.
 
-4. The current version has an unnecessary external dependency on waitForKeyElements(). It works fine, but it shouldn't be there,
-   especially since there is a waitForPredicate9) function internally.
+4. The current version has an unnecessary external dependency on
+   waitForKeyElements(). It works fine, but it shouldn't be there, especially
+   since there is a waitForPredicate() function which is nearly the same thing.
 
