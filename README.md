@@ -15,7 +15,7 @@ Tampermonkey allows the running of "user scripts" on webpages from particular do
 The user must install the custom script, and associate it to a particular domain or set of domains. Thereafter, all pages loaded from those domains will run that "user script" after the browser page has loaded.
 
 
-## How does this particular Tweak work?
+ ## How does this Tweak work?
 
 This script registers for apigee.com . When it finds that the current page displays the proxies list, it
 sets up a function to run on a timer. This function looks for rows in the table of proxies, and
@@ -33,8 +33,8 @@ If you don't have Tampermonkey loaded for your browser, you must first visit  [t
 
 Then,
 
-1 Use the tampermonkey menu to add a new script.
-  <img src="img/tm-add-new-script.png" width='308px'>
+1. Use the tampermonkey menu to add a new script.
+   <img src="img/tm-add-new-script.png" width='308px'>
 
 2. copy-paste the [toggle-deploy-state-from-proxies-list.user.js](lib/toggle-deploy-state-from-proxies-list.user.js) script into place.
 
@@ -58,14 +58,10 @@ It *ought to* work just fine on other combinations of browsers.
 
 0. Sometimes the checkboxes do not appear. When that happens just reload the page.
 
-1. Because of a race condition, the state of the checkbox can get unsynchronized with the state of the green dot, especially
-   if you change the selected org in the dropdown.
+1. Because of a race condition, the state of the checkbox can get unsynchronized with the state of the green dot.
 
 2. There's no feedback presented when deploying or undeploying - no progress and no status on failure.
 
 3. It's not clear it will work if you want to undeploy a revision of a proxy that is not the latest.
 
-4. The current version has an unnecessary external dependency on
-   waitForKeyElements(). It works fine, but it shouldn't be there, especially
-   since there is a waitForPredicate() function which is nearly the same thing.
 
