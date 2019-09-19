@@ -56,12 +56,12 @@ It *ought to* work just fine on other combinations of browsers.
 
 ## Bugs
 
-0. Sometimes the checkboxes do not appear. When that happens just reload the page.
+1. Sometimes the checkboxes do not appear. When that happens just reload the page.
 
-1. Because of a race condition, the state of the checkbox can get unsynchronized with the state of the green dot.
+2. Because of a race condition, the state of the checkbox can get unsynchronized with the state of the green dot.
 
-2. There's no feedback presented when deploying or undeploying - no progress and no status on failure.
+3. There's no feedback presented when deploying or undeploying - no progress and no status on failure.
 
-3. It's not clear it will work if you want to undeploy a revision of a proxy that is not the latest.
+4. It's not clear it will work if you want to undeploy a revision of a proxy that is not the latest.
 
 
