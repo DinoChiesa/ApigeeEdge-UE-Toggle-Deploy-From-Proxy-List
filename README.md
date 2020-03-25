@@ -35,8 +35,11 @@ row. It also adds an event listener to each added checkbox.
 
 Rows get added and removed. So periodically the logic re-runs.
 
-When the state of the checkbox changes, the script deploys or undeploys the
-latest revision of the proxy to the currently selected environment.
+Tick the checkbox to tell the script to deploy or undeploy the proxy to the
+currently selected environment. You can only deploy the latest revision. As of
+version 0.1.7 of this script, undeploying a revision of a proxy that is not the
+latest, will work correctly.
+
 
 
 ## Installing the script
@@ -75,5 +78,4 @@ It *ought to* work just fine on other combinations of browsers.
 
 3. There's not much UI feedback presented when deploying or undeploying - no progress and no status on failure.
 
-4. It's not clear it will work if you want to undeploy a revision of a proxy that is not the latest.
-
+4. It's not possible to deploy a revision of the proxy that is not the latest.
